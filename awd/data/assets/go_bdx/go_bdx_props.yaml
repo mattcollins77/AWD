@@ -28,19 +28,38 @@ num_actions: 16
 # 1 + 15 * (3 + 6 + 3 + 3) - 3
 
 motor_efforts:
-  [100, 100, 100, 100, 100, 50, 50, 50, 50, 10, 10, 100, 100, 100, 100, 100]
+  [
+    23.7,
+    23.7,
+    23.7,
+    23.7,
+    23.7,
+    7.3,
+    7.3,
+    7.3,
+    7.3,
+    0.2943,
+    0.2943,
+    23.7,
+    23.7,
+    23.7,
+    23.7,
+    23.7,
+  ]
+
 #13 + dof_obs_size + 28 + 3 * num_key_bodies # [root_h, root_rot, root_vel, root_ang_vel, dof_pos, dof_vel, key_body_pos]
 num_amp_obs_per_step: 131
 
-friction: 0.0
+friction: 0.005
 angular_damping: 0.0
 armature: 0.0
 thickness: 0.001
 
 # TODO make lists to differentiate motors ?
 # used for custom pd control
-p_gains: 25
-d_gains: 0.6
+p_gains: 10
+d_gains: 0.3
+
 max_effort: 23.7
 max_velocity: 30
 
